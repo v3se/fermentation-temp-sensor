@@ -1,0 +1,1 @@
+Place this to /usr/lib/cgi-bin
