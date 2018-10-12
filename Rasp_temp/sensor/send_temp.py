@@ -7,7 +7,7 @@ from datetime import datetime
  
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
-remote_server = "ec2-18-195-162-116.eu-central-1.compute.amazonaws.com" #remote server url or IP address
+remote_server = "" #remote server url or IP address
  
 base_dir = '/sys/bus/w1/devices/'
 device_folder = glob.glob(base_dir + '28*')[0]
