@@ -16,6 +16,7 @@ async def recv_tmp(websocket, path):
                 temp = await websocket.recv()
                 f = open('/var/www/html/temps.txt','w')
                 f.write(temp + '\n')
+                f.close()
                 temp_c,temp_f = temp.split(",")
                 mycursor.execute("INSERT INTO sensor_data (temp_c, temp_f, idbatch) VALUES (" + temp_c + "," + temp_f + ", 8)")
                 mydb.commit()
